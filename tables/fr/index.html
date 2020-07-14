@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Une technique simple pour apprendre ses tables de multiplication</title>
+        <meta charset="utf-8">
+        <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+        <script src="../makeChallenge.js"></script>
+        <script src="../makeTablesTable.js"></script>
+        <script src="../makeTablesList.js"></script>
+        <script>
+            window.onload = function() 
+            {
+                var linkChallenge5 = document.getElementById("linkChallenge5");
+                linkChallenge5.style.color = 'blue'
+                linkChallenge5.style.cursor = 'pointer'
+                linkChallenge5.onclick = function()
+                {
+                    makeChallengePdf(5);
+                    return false;
+                }
+
+                var linkChallenge6 = document.getElementById("linkChallenge6");
+                linkChallenge6.style.color = 'blue'
+                linkChallenge6.style.cursor = 'pointer'
+                linkChallenge6.onclick = function()
+                {
+                    makeChallengePdf(6);
+                    return false;
+                }
+
+                var linkChallenge7 = document.getElementById("linkChallenge7");
+                linkChallenge7.style.color = 'blue'
+                linkChallenge7.style.cursor = 'pointer'
+                linkChallenge7.onclick = function()
+                {
+                    makeChallengePdf(7);
+                    return false;
+                }
+
+                var linkChallenge8 = document.getElementById("linkChallenge8");
+                linkChallenge8.style.color = 'blue'
+                linkChallenge8.style.cursor = 'pointer'
+                linkChallenge8.onclick = function()
+                {
+                    makeChallengePdf(8);
+                    return false;
+                }
+
+                var linkChallenge9 = document.getElementById("linkChallenge9");
+                linkChallenge9.style.color = 'blue'
+                linkChallenge9.style.cursor = 'pointer'
+                linkChallenge9.onclick = function()
+                {
+                    makeChallengePdf(9);
+                    return false;
+                }
+
+                var linkTablesList = document.getElementById("linkTablesList");
+                linkTablesList.style.color = 'blue'
+                linkTablesList.style.cursor = 'pointer'
+                linkTablesList.onclick = function() 
+                {
+                    makeTablesListPdf();
+                    return false;
+                }
+
+                var linkTablesTable = document.getElementById("linkTablesTable");
+                linkTablesTable.style.color = 'blue'
+                linkTablesTable.style.cursor = 'pointer'
+                linkTablesTable.onclick = function() 
+                {
+                    makeTablesTablePdf();
+                    return false;
+                }
+               
+            }
+        </script>
+        <style>
+            
+            .dnld-pdf
+            {
+                color: red;
+                text-decoration: underline;
+                cursor: not-allowed;
+                /* 
+                   default state to handle 'noscript' case; 
+                   restored functional when js is enabled; 
+                */
+            }
+
+            .infolink
+            {
+                color: blue;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+
+            .infolink .info
+            {
+                display: none;
+            }
+
+            .infolink:hover
+            {
+                background-color: yellow;
+            }
+
+            .infolink:hover .info
+            {
+                background-color: yellow;
+                display: inline-block;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Une technique simple pour apprendre ses tables de multiplication</h1>
+
+        <h2>Introduction</h2>
+        
+        <p>
+        Les tables de multiplication, c'est pas rigolo, c'est du par-coeur.<br>
+        Toutefois c'est le ticket d'entrée, si on veut pouvoir enchaîner quelques calculs à une vitesse décente.<br>
+        Voici ci-dessous une méthode qui doit vous permettre de connaître vos tables de multiplication en un temps record et quasiment sans effort.
+        Et si c'était possible ?
+        </p>
+
+        <h2>La technique</h2>
+    
+        Il s'agit d'appliquer pendant quelques jours, idéalement deux fois par jour, le protocole suivant.
+        <ol>
+            <li>
+                Imprimer un challenge aléatoire disponible <span class="infolink">ici<span class="info"> : section "ressources", plus bas</span></span> ; 
+            </li>
+            <li>
+                Réviser ses tables pendant une minute ou deux ;
+            </li>
+            <li>
+                Compléter le challenge à la main, le plus vite possible, en temps chronométré.
+            </li>
+        </ol>
+    
+        En appliquant ce protocole quelques jours, vous devriez constater rapidement :
+        <ol>
+            <li>
+                Que vous connaissez de mieux en mieux vos tables,
+            </li>
+            <li>
+                Que vous allez de plus en plus vite.
+            </li>
+        </ol>
+
+        <h2>Précisions importantes</h2>
+        
+        <ul>
+            <li>
+                Vous pouvez commencer par réviser vos tables jusqu'à, par exemple, la table de 6, puis avancer d'un cran chaque jour.
+            </li>
+            <li>
+                Si une feuille entière vous semble trop, vous pouvez faire un challenge d'une demi-feuille.
+            </li>
+            <li>
+                Il est très important de toujours réviser <i>juste avant</i> un nouveau challenge. Par ailleurs, il est inutile de réviser à d'autres
+                moments.
+            </li>
+            <li>
+                Les révisions portent sur <i>toutes</i> les tables vues jusque là.
+            </li>
+            <li>
+                Ne corrigez pas vos challenges. C'est toxique pour votre motivation. Il n'est pas important que vous ayiez fait des erreurs. Ce qui
+                compte c'est que votre cerveau enregistre ce qu'il sait bien et ce qu'il sait moins bien ou pas du tout, et il s'efforcera d'y
+                rémédier automatiquement lors de votre prochaine révision (qui précédera le prochain challenge). Lorsque, après quelques répétitions,
+                vous complèterez vos challenges vite et sans le moindre doute, c'est que vous connaîtrez vos tables et il vous semblera probablement
+                une perte de temps de faire une vérification point à point.
+            </li>
+            <li>
+                Si vous ne savez pas, ne répondez pas au hasard, laissez en blanc. Les challenges ne sont pas corrigés de toute façon. Les challenges
+                sont comme un miroir, ils vous mettent en face de vous-même : savez-vous ou ne savez-vous pas vos tables ? C'est la réponse que vous
+                obtenez en complétant un challenge. Cela n'engage et ne concerne que vous. Si vous voulez le diagnostic, si vous voulez arriver à
+                contempler par vous-même que vous connaissez vos tables, faites l'exercice honnêtement.
+            </li>
+            <li>
+                N'essayez pas non plus d'aller trop vite, car cela réduirait votre attention à l'exercice. Faites l'exercice à 60% de vitesse,
+                autrement dit, calme, concentré, sans perdre de temps, mais en vous autorisant à chercher la réponse dans votre tête
+                occasionnellement. Si vous ne savez pas, avancez, vous saurez la prochaine fois.
+            </li>
+            <li>
+                Relaxez-vous et répétez cette simple routine deux fois par jour, jusqu'à connaître vos tables parfaitement.
+            </li>
+        </ul>
+
+        <h2 id=resources>Ressources à télécharger</h2>
+
+        <noscript>
+            <p><span style="color:red">ATTENTION:</span> JavaScript est actuellement désactivé dans votre navigateur. Il est nécessaire de l'activer
+            car les fichiers sont générés par un programme JavaScript.</p>
+        </noscript>
+       
+        <ul>
+            <li>Générer un challenge aléatoire, jusqu'à la table de 
+                <span id="linkChallenge5" class="dnld-pdf">5</span>, 
+                <span id="linkChallenge6" class="dnld-pdf">6</span>, 
+                <span id="linkChallenge7" class="dnld-pdf">7</span>, 
+                <span id="linkChallenge8" class="dnld-pdf">8</span>, 
+                <span id="linkChallenge9" class="dnld-pdf">9</span>, 
+                (télécharger au format pdf).</li>
+            <li>Les tables de multiplications en <i>liste</i> : <span id="linkTablesList" class="dnld-pdf">télécharger au format pdf.</span></li>
+            <li>Les tables de multiplications en <i>tableau</i> : <span id="linkTablesTable" class="dnld-pdf">télécharger au format pdf</span>.</li>
+        </ul>
+
+        <h2>Notes de fin</h2>
+
+        <p>
+        Si cette méthode vous a permis d'enfin connaître vos tables, n'hésitez à partager autour de vous.<br>
+        N'hésitez pas aussi à revenir un peu plus tard, car d'autres exercices de cette nature sont au programme.<br>
+        Si vous avez une demande particulière, vous pouvez m'envoyer un <a href="mailto:dubvi.edu@free.fr">e-mail</a> afin que je réfléchisse à un entrainement dans ce
+        sens.<br> 
+        Enfin, si vous souhaitez voir ce projet avancer plus vite, n'hésitez pas à glisser un euro dans la <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Z9SUSV9ZQCW88&source=url">cagnotte</a> !<br>
+        </p>
+
+        <p><i>"Ce qu'on sait, savoir qu'on le sait ; ce qu'on ne sait pas, savoir qu'on ne le sait pas : telle est la
+            véritable connaissance."<br>-- Confucius</i></p>
+
+        <a href="../../fr/index.html#top">Revenir sur la page d'accueil</a>
+        <br>
+        <br>
+
+    </body>
+</html>
