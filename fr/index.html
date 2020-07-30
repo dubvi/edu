@@ -4,12 +4,12 @@
         <title>dubvi/edu</title>
         <meta charset="utf-8">
         <style>
-            #page
+            body
             {
                 font-family: math;
             }
 
-            #header
+            header
             {
                 background-color: lightgrey;
             }
@@ -29,13 +29,19 @@
                 color: black;
             }
 
-            .section
+            section
+            {
+                margin-top: 40px;
+                margin-bottom: 40px;
+            }
+
+            footer
             {
                 margin-top: 40px;
                 margin-bottom: 40px;
             }
                
-            .section .section-title
+            section .section-title
             {
                 font-size: 20px;
                 font-weight: bold;
@@ -43,19 +49,32 @@
                 margin-left: 20px;
             }
 
-            .section .section-line
+            section .section-line
             {
                 border-bottom: 1px solid black;
             }
-            
-            .section .tile
+ 
+            footer .section-line
+            {
+                border-bottom: 1px solid black;
+            }
+         
+            section .tiles
+            {
+                display: inline-flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            section .tile
             {
                 display: inline-block;
             }
 
-            .section .tile .tile-content
+            section .tile .tile-content
             {
                 width: 300px;
+                height: 80px;
                 border: 1px solid;
                 text-align: center;
                 margin-left: 20px;
@@ -63,7 +82,7 @@
                 margin-right: 20px;
             }
             
-            .section .tile .tile-title
+            section .tile .tile-title
             {
                 width: max-content;
                 border-top: 1px solid;
@@ -145,45 +164,45 @@
         </style>
     </head>
     <body>
-        <div id="page">
-            <div id="header">
-                <span id="title">dubvi/edu</span>
-            </div>
-            <br>
-            <div class="section">
+        <header>
+            <span id="title">dubvi/edu</span>
+        </header>
+        <br>
+        <main>
+            <section>
                 <span class="section-title">Maths</span>
                 <hr class="section-line">
-                <div class="tile">
-                    <div class="tile-title" id="maths-level1-title">niveau 1</div>
-                    <div class="tile-content" id="maths-level1-content">
-                        <ul>
-                            <li><a href="../tables/fr/index.html">tables de multiplications</a></li>
-                        </ul>
+                <div class="tiles">
+                    <div class="tile">
+                        <div class="tile-title" id="maths-level1-title">niveau 1</div>
+                        <div class="tile-content" id="maths-level1-content">
+                            <ul>
+                                <li><a href="../tables/fr/index.html">tables de multiplications</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="tile">
-                    <div class="tile-title" id="maths-level2-title">niveau 2</div>
-                    <div class="tile-content" id="maths-level2-content">
+                    <div class="tile">
+                        <div class="tile-title" id="maths-level2-title">niveau 2</div>
+                        <div class="tile-content" id="maths-level2-content">
+                            <ul>        
+                                <!-- <li style="visibility: hidden">tables de multiplications</li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tile">
+                        <div class="tile-title" id="maths-level3-title">niveau 3</div>
+                        <div class="tile-content" id="maths-level3-content">
                         <ul>        
-                            <li style="visibility: hidden">tables de multiplications</li>
+                            <!-- <li style="visibility: hidden">tables de multiplications</li> -->
                         </ul>
                     </div>
                 </div>
-                <div class="tile">
-                    <div class="tile-title" id="maths-level3-title">niveau 3</div>
-                    <div class="tile-content" id="maths-level3-content">
-                        <ul>        
-                            <li style="visibility: hidden">tables de multiplications</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="section" id="footer">
-                <hr class="section-line">
-                    <span id="contact"><a href="mailto:dubvi.edu@free.fr">contact</a></span>
-                    <span id="donate"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Z9SUSV9ZQCW88&source=url">nous soutenir</a></span>
-                </div>
-            </div>
-        </div>
+            </section>
+        </main>
+        <footer>
+            <hr class="section-line">
+            <span id="contact"><a href="mailto:dubvi.edu@free.fr">contact</a></span>
+            <span id="donate"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Z9SUSV9ZQCW88&source=url">nous soutenir</a></span>
+        </footer>
     </body>
 </html>
